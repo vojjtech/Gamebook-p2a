@@ -1,46 +1,3 @@
-.startpage{
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-    background-image: url(../images/island.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.startmenu{
-    text-align: center;
-    color: rgb(0, 0, 0);
-}
-
-h1 {
-    font-size: 4em;
-    margin: 0.3em;
-    background-color: rgba(210, 206, 206, 0.344);
-}
-p{
-    margin-top: 0.25em;
-    
-}
-ul{
-    text-align: start;
-    margin: 0.5em 0em;
-}
-
-.button{
-    font-size: 2em;
-    background-color: rgb(5, 103, 5);
-    padding: 0.5em 1em;
-    border-radius: .5em;
-    color:white;
-    text-decoration: none;
-    font-weight: 700;
-    text-align: center;
-
-}
-.button:hover{
-    color: black
-}
 .img-responsive{
     width: 100%;
     height: 100%;
@@ -51,29 +8,84 @@ ul{
 }
 
 .page{
-    display: grid;
-    grid-template-areas:
-                        "image"
-                        "content"
-                        "options";
-    grid-template-rows: 6fr 2fr 2fr;
-    height: 100vh;
-    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100dvh;
+    width: 100dvw;
+
 }
-.single_option{
-    grid-template-rows: 6fr 2fr 1fr;
+
+.page-start{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/island.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.startmenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3em;
+    text-align: center;
+}
+
+
+.h1-text{
+    font-size: 3em;
+    margin: 0.3em;
+}
+.start__h1{
+    background-color: rgb(220, 163, 94);
+    border-radius: .375em;
+    border: 3px rgb(170, 139, 77) solid;
+    padding: .5rem;
+}
+
+ul{
+    text-align: start;
+    margin: 0.5em 0em;
+}
+p{
+    margin: 0em;
+}
+
+.button{
+    font-size: 1.5em;
+    background-color: rgb(5, 103, 5);
+    padding: 0.25em .75em;
+    border-radius: .5em;
+    color:white;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
     
 }
+.button:hover{
+    color: black
+}
+.button-start{
+    width: 5em;
+    background-color: red;
+}
+
 .page__image{
     grid-area: "image";
+    min-height: 14em;
 }
 .page__content{
     grid-area: "content";
+    overflow-y: auto;
     padding: 1em;
     font-size: 1.5em;
     text-align: center;
 }
 .page__options{
+    grid-area: "options";
     display: flex;
     flex-direction: column;
     background-color: rgb(2, 36, 2);
@@ -81,8 +93,7 @@ ul{
 }
 
 .option{
-    flex-grow: 1;
     border-radius: .25em;
-    margin: 0.25em;
+    margin: .25em;
 }
 
